@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from app.models import Ministry, District
+from app.models import Ministry, District, Chapter, Event, Feedback
 
 
 class MinistrySerializer(serializers.ModelSerializer):
@@ -20,6 +20,19 @@ class ChapterSerializer(serializers.ModelSerializer):
     district = DistrictSerializer()
 
     class Meta:
-        model = District
-        # fix 'date'
-        fields = ('id', 'title', 'story', 'image', 'ministry', 'district')
+        model = Chapter
+        fields = ('id', 'date', 'title', 'story', 'image', 'ministry', 'district')
+
+
+class EventSerializer(serializers.ModelSerializer):
+    ministry = MinistrySerializer()
+
+    class Meta:
+        model = Event
+        fields = ('id', 'date', 'title', 'story', 'image', 'location', 'ministry')
+
+
+class FeedbackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Feedback
+        fields = ('id', 'title', 'content', 'date')
