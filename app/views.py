@@ -76,9 +76,12 @@ def get_events(request, format=None):
 @api_view(['POST'])
 def post_feedback(request):
     print("posting#")
+    # checking sent data directly from request
+    # print(request.data)
+    # print(request.data['content'])
     serializer = FeedbackSerializer(data=request.data)
     if serializer.is_valid():
-        # checking sent data
+        # checking sent data after serialization
         # print(serializer.validated_data['title'])
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)

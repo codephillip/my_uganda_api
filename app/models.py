@@ -52,6 +52,7 @@ class Feedback(models.Model):
     title = models.TextField()
     content = models.TextField()
     date = models.DateField(auto_now_add=True)
+    time = models.TimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title

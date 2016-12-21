@@ -35,4 +35,4 @@ class EventSerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        fields = ('id', 'title', 'content', 'date')
+        fields = ('id', 'title', 'content', 'date', 'time')
