@@ -32,9 +32,6 @@ class Chapter(models.Model):
     ministry = models.ForeignKey(Ministry)
     district = models.ForeignKey(District)
 
-    def __str__(self):
-        return self.title
-
 
 class Event(models.Model):
     date = models.DateField()
@@ -43,6 +40,3 @@ class Event(models.Model):
     ministry = models.ForeignKey(Ministry)
     location = models.CharField(max_length=250)
     image = models.CharField(max_length=250, default='http://127.0.0.1:8080/heroku.jpg')
-
-    def __str__(self):
-        return self.title
