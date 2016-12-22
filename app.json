@@ -1,0 +1,8 @@
+{
+  "name": "myUgandaApi",
+  "description": "Api for the MyUgandaApp https://play.google.com/store/apps/details?id=com.codephillip.intmain.e_govt",
+  "image": "heroku/python",
+  "repository": "https://github.com/codephillip/my_uganda_api",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
