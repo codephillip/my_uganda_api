@@ -28,7 +28,7 @@ class Chapter(models.Model):
     date = models.DateField()
     title = models.CharField(max_length=250)
     story = models.TextField()
-    image = models.CharField(max_length=250, default='http://127.0.0.1:8080/heroku.jpg')
+    image = models.CharField(max_length=250, default='http://mstensaasfamily.com/wp-content/uploads/2015/10/uganda_grunge_flag_by_syndikata_np-d5oxmmv.jpg')
     ministry = models.ForeignKey(Ministry)
     district = models.ForeignKey(District)
 
@@ -42,7 +42,7 @@ class Event(models.Model):
     story = models.TextField()
     ministry = models.ForeignKey(Ministry)
     location = models.CharField(max_length=250)
-    image = models.CharField(max_length=250, default='http://127.0.0.1:8080/heroku.jpg')
+    image = models.CharField(max_length=250, default='http://mstensaasfamily.com/wp-content/uploads/2015/10/uganda_grunge_flag_by_syndikata_np-d5oxmmv.jpg')
 
     def __str__(self):
         return self.title
