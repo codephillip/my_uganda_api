@@ -18,7 +18,7 @@ def get_ministrys(request, format=None):
 
     if request.method == 'GET':
         serializer = MinistrySerializer(ministrys, many=True)
-        return Response(serializer.data)
+        return Response({'ministrys': serializer.data})
 
 
 @api_view(['GET'])
@@ -43,7 +43,7 @@ def get_districts(request, format=None):
 
     if request.method == 'GET':
         serializer = DistrictSerializer(districts, many=True)
-        return Response(serializer.data)
+        return Response({'districts': serializer.data})
 
 
 @api_view(['GET'])
@@ -57,7 +57,7 @@ def get_chapters(request, format=None):
 
     if request.method == 'GET':
         serializer = ChapterSerializer(chapters, many=True)
-        return Response(serializer.data)
+        return Response({'chapters': serializer.data})
 
 
 @api_view(['GET'])
@@ -71,7 +71,7 @@ def get_events(request, format=None):
 
     if request.method == 'GET':
         serializer = EventSerializer(events, many=True)
-        return Response(serializer.data)
+        return Response({'events': serializer.data})
 
 
 @api_view(['POST'])
@@ -98,7 +98,7 @@ def get_feedbacks(request, format=None):
 
     if request.method == 'GET':
         serializer = FeedbackSerializer(feedbacks, many=True)
-        return Response(serializer.data)
+        return Response({'feedback': serializer.data})
 
 
 def index(request):
