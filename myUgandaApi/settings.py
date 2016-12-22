@@ -25,7 +25,7 @@ SECRET_KEY = '9ghp9_r78dci$pn7mfn%zyqse@9f@s3@)@_h7u=n_gep1(ruwc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://my-uganda-api.herokuapp.com/', 'my-uganda-api.herokuapp.com']
 
 
 # Application definition
