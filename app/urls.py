@@ -4,6 +4,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from app import views
 
 urlpatterns = [
+    url(r'^$', views.index, name='index'),
     url(r'^api/v1/feedbacks$', views.get_feedbacks, name='get_feedbacks'),
     url(r'^api/v1/feedbacks/post$', views.post_feedback, name='post_feedback'),
     url(r'^api/v1/events$',  views.get_events, name='get_events'),

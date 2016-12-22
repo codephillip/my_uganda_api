@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -98,3 +99,7 @@ def get_feedbacks(request, format=None):
     if request.method == 'GET':
         serializer = FeedbackSerializer(feedbacks, many=True)
         return Response(serializer.data)
+
+
+def index(request):
+    return render(request, 'index.html')

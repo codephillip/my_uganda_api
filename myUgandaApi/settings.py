@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9ghp9_r78dci$pn7mfn%zyqse@9f@s3@)@_h7u=n_gep1(ruwc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://my-uganda-api.herokuapp.com/', 'my-uganda-api.herokuapp.com']
+ALLOWED_HOSTS = ['https://my-uganda-api.herokuapp.com/', 'my-uganda-api.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
