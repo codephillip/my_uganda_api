@@ -77,9 +77,17 @@ WSGI_APPLICATION = 'myUgandaApi.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd4nvtocecugjjr',
+        'USER': 'katwcowhkqwzyw',
+        'PASSWORD': '2da266ccc6e88c4b9587ea6848e292bac6b5648187e608245e7f2fff9bd78ca0',
+        'HOST': 'ec2-54-163-240-7.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
